@@ -2,7 +2,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import AppLayout from "./layout/AppLayout";
 import Home from "./pages/Home";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   const appRouter = createBrowserRouter([
@@ -15,10 +14,6 @@ function App() {
           element: <Home />,
         },
       ],
-    },
-    {
-      path: "privacy-policy",
-      element: <PrivacyPolicy />,
     },
   ]);
 

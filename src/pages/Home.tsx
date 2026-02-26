@@ -1,9 +1,7 @@
+import React from "react";
+
 function Home() {
-  return (
-    <>
-      <p>React Boiler Plate</p>
-    </>
-  );
+  return <div>Home</div>;
 }
 
 export default Home;
