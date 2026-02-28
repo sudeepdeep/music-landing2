@@ -147,7 +147,7 @@ function LatestReleases() {
           </Card>
         </div>
       </div>
-      <div className="max-w-4xl mx-auto md:h-[100vh] h-[80vh] md:mt-0 mt-[50px]">
+      <div className="max-w-4xl mx-auto h-[80%] md:mt-0 mt-[50px]">
         <Merchandise />
       </div>
       {/* <div className="h-[100vh] mt-5">

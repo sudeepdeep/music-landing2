@@ -193,15 +193,15 @@ export default function Merchandise() {
             />
           ))}
         </div>
-
-        <Button
-          btnTxt="visit store"
-          logo="store"
-          handleClickBtn={() =>
-            (window.location.href = socialMedia.pieceofrock)
-          }
-          sx="w-[150px] mt-[40px]"
-        />
+        <div className="w-[180px] mt-[40px]">
+          <Button
+            btnTxt="visit store"
+            logo="store"
+            handleClickBtn={() =>
+              (window.location.href = socialMedia.pieceofrock)
+            }
+          />
+        </div>
       </div>
     </div>
   );
