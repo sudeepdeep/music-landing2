@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Button from "./Button";
+import { socialMedia } from "../constants";
 
 const merchandise = [
   {
@@ -90,10 +91,7 @@ export default function Merchandise() {
   const dotCount = merchandise.length - visibleCount + 1;
 
   return (
-    <div
-      className="max-w-4xl mx-auto h-[100vh] mt-[120px] px-6 sm:px-0"
-      id="merchandise"
-    >
+    <div className="max-w-4xl mx-auto h-auto px-6 sm:px-0" id="merchandise">
       <p className="text-2xl font-extrabold tracking-tight mb-8">MERCHANDISE</p>
 
       <p className="text-primary font-semibold">The P.O.R Hukum Tee</p>
@@ -118,7 +116,7 @@ export default function Merchandise() {
           </div>
         )}
 
-        <div className="relative flex items-center h-[500px] w-full">
+        <div className="relative flex items-center h-auto w-full">
           {/* Left Arrow */}
           <button
             onClick={prev}
@@ -145,7 +143,7 @@ export default function Merchandise() {
             {visible.map((item: any, i: number) => (
               <div
                 key={index + i}
-                className="flex-shrink-0 h-[500px] overflow-hidden rounded-md cursor-zoom-in transition-transform duration-200 hover:scale-[1.02]"
+                className="flex-shrink-0  h-[500px] overflow-hidden rounded-md cursor-zoom-in transition-transform duration-200 hover:scale-[1.02]"
                 style={{
                   width: `calc(${100 / visibleCount}% - ${((visibleCount - 1) * 16) / visibleCount}px)`,
                 }}
@@ -199,8 +197,10 @@ export default function Merchandise() {
         <Button
           btnTxt="visit store"
           logo="store"
-          handleClick={() => console.log("called")}
-          sx={"w-[200px] mt-[40px]"}
+          handleClickBtn={() =>
+            (window.location.href = socialMedia.pieceofrock)
+          }
+          sx="w-[150px] mt-[40px]"
         />
       </div>
     </div>

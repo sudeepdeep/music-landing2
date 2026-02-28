@@ -9,6 +9,7 @@ import {
   SpotifyIcon,
   YoutubeIcon,
 } from "../assets/Icons";
+import { socialMedia } from "../constants";
 
 function NavbarLatest() {
   const [scrollDirection, setScrollDirection] = useState("up");
@@ -40,7 +41,8 @@ function NavbarLatest() {
   }
 
   function handleClickonCD() {
-    window.location.href = "/music/end-of-beginning";
+    window.location.href =
+      "https://open.spotify.com/album/47i89HeDSUWHJGFT1wzAWP";
   }
   return (
     <>
@@ -99,15 +101,28 @@ function NavbarLatest() {
                 Mailing
               </a> */}
             </div>
-            <div className="hidden md:flex items-center gap-2">
+            <div className="hidden md:flex items-center gap-2 text-white">
               {/* <button className="p-2 hover:bg-white/5 rounded-full transition-colors">
                 <span className="material-icons text-xl">search</span>
               </button> */}
-              <SpotifyIcon h={4} />
-              <AppleMusicIcon h={4} />
-              <AmazonMusicIcon h={5} />
-              <YoutubeIcon h={4} />
-              <SoundCloudIcon h={5} />
+              <span
+                onClick={() => (window.location.href = socialMedia.youtube)}
+              >
+                <YoutubeIcon h={4} />
+              </span>
+              <span
+                onClick={() => (window.location.href = socialMedia.spotify)}
+              >
+                <SpotifyIcon h={4} />
+              </span>
+              <span onClick={() => (window.location.href = socialMedia.apple)}>
+                <AppleMusicIcon h={4} />
+              </span>
+              <span onClick={() => (window.location.href = socialMedia.amazon)}>
+                <AmazonMusicIcon h={5} />
+              </span>
+
+              {/* <SoundCloudIcon h={4} /> */}
             </div>
             <div className="flex justify-end md:hidden">
               <AnimatePresence mode="wait">
@@ -146,10 +161,10 @@ function NavbarLatest() {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="fixed top-16 left-0 w-full h-[40vh] bg-white/90 z-40"
+                      className="fixed top-16 left-0 w-full rounded-lg h-[40vh] bg-white/90 z-40"
                     >
                       <motion.div
-                        className="flex flex-col items-center mt-[120px] gap-10 h-full"
+                        className="flex flex-col items-center  mt-[40px] gap-10 h-full"
                         initial={{ y: -50, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.1, duration: 0.4 }}
@@ -162,27 +177,59 @@ function NavbarLatest() {
                           animate={{ scale: 1, opacity: 1 }}
                           transition={{ delay: 0.2, duration: 0.4 }}
                         /> */}
-
-                        {["TOUR", "MUSIC", "MERCHANDISE"].map((item, index) => (
-                          <motion.a
-                            key={item}
-                            href={`#${item.toLowerCase().replace(" ", "")}`}
-                            className="nav-link text-2xl text-black hover:text-gray-300 transition-colors"
-                            onClick={() => handleShowHam()}
-                            initial={{ x: -50, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{
-                              delay: 0.3 + index * 0.1,
-                              duration: 0.4,
-                              type: "spring",
-                              stiffness: 100,
-                            }}
-                            whileHover={{ scale: 1.1, x: 10 }}
-                            whileTap={{ scale: 0.95 }}
+                        <div className="text-black flex items-center gap-[20px]">
+                          <span
+                            onClick={() =>
+                              (window.location.href = socialMedia.youtube)
+                            }
                           >
-                            {item}
-                          </motion.a>
-                        ))}
+                            <YoutubeIcon h={4} />
+                          </span>
+                          <span
+                            onClick={() =>
+                              (window.location.href = socialMedia.spotify)
+                            }
+                          >
+                            <SpotifyIcon h={4} />
+                          </span>
+                          <span
+                            onClick={() =>
+                              (window.location.href = socialMedia.apple)
+                            }
+                          >
+                            <AppleMusicIcon h={4} />
+                          </span>
+                          <span
+                            onClick={() =>
+                              (window.location.href = socialMedia.amazon)
+                            }
+                          >
+                            <AmazonMusicIcon h={5} />
+                          </span>
+                        </div>
+
+                        {["TOUR", "LATEST RELEASES", "MERCHANDISE"].map(
+                          (item, index) => (
+                            <motion.a
+                              key={item}
+                              href={`#${item.toLowerCase().replace(" ", "")}`}
+                              className="nav-link text-2xl text-black hover:text-gray-300 transition-colors"
+                              onClick={() => handleShowHam()}
+                              initial={{ x: -50, opacity: 0 }}
+                              animate={{ x: 0, opacity: 1 }}
+                              transition={{
+                                delay: 0.3 + index * 0.1,
+                                duration: 0.4,
+                                type: "spring",
+                                stiffness: 100,
+                              }}
+                              whileHover={{ scale: 1.1, x: 10 }}
+                              whileTap={{ scale: 0.95 }}
+                            >
+                              {item}
+                            </motion.a>
+                          ),
+                        )}
                       </motion.div>
                     </motion.div>
                   </>

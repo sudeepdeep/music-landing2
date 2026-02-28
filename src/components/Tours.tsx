@@ -69,7 +69,7 @@ function Tours() {
 
               <button
                 onClick={() => (window.location.href = item.link)}
-                className={`bg-primary/10  text-primary  px-4 py-2 rounded-lg text-xs font-bold transition-colors ${item.status.toLowerCase().includes("sold") ? "cursor-not-allowed" : "cursor-pointer"}`}
+                className={`bg-primary/10  text-primary  px-4 py-2 rounded-lg text-xs font-bold transition-colors ${item.status.toLowerCase().includes("sold") ? "text-[10px] text-gray-500 whitespace-nowrap cursor-not-allowed" : "cursor-pointer"}`}
               >
                 {item.status}
               </button>

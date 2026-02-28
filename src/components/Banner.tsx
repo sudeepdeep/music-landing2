@@ -1,9 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { SpotifyIcon } from "../assets/Icons";
-
-const MONTHLY_LISTENERS = 23_653_910;
-const COUNTRIES = 184;
-const DURATION = 2000;
+import { COUNTRIES, DURATION, MONTHLY_LISTENERS, STREAMS } from "../constants";
 
 function useCountUp(target: number, duration: number) {
   const [count, setCount] = useState(0);
@@ -34,6 +31,7 @@ function useCountUp(target: number, duration: number) {
 function Banner() {
   const count = useCountUp(COUNTRIES, DURATION);
   const listenersCount = useCountUp(MONTHLY_LISTENERS, DURATION);
+  const streamsCount = useCountUp(STREAMS, DURATION);
 
   return (
     <div className="w-full">
@@ -64,7 +62,7 @@ function Banner() {
         <div className="hidden md:flex absolute inset-0 flex-col items-start justify-start pt-[200px] pl-[300px]">
           <StatCard>
             <h1 className="text-slate-600 dark:text-slate-300 text-2xl font-bold">
-              13 Billion
+              {streamsCount.toLocaleString()} Billion
               <br />
               <span className="text-sm flex gap-2 justify-center items-center">
                 Streams on <SpotifyIcon h={5} />
@@ -108,18 +106,18 @@ function Banner() {
           <h1 className="text-slate-600 dark:text-slate-300 text-xl font-bold">
             {count.toLocaleString()}
             <br />
-            <span className="text-sm flex gap-2 justify-center items-center">
-              Countries <SpotifyIcon h={5} />
+            <span className="text-sm flex gap-1 justify-center items-center">
+              Countries <SpotifyIcon h={4} />
             </span>
           </h1>
         </StatCard>
 
         <StatCard>
           <h1 className="text-slate-600 dark:text-slate-300 text-xl font-bold">
-            13 Billion
+            {streamsCount.toLocaleString()} Billion
             <br />
-            <span className="text-sm flex gap-2 justify-center items-center">
-              Streams on <SpotifyIcon h={5} />
+            <span className="text-sm flex gap-1 justify-center items-center">
+              Streams on <SpotifyIcon h={4} />
             </span>
           </h1>
         </StatCard>
@@ -128,8 +126,8 @@ function Banner() {
           <h1 className="text-slate-600 dark:text-slate-300 text-xl font-bold">
             {listenersCount.toLocaleString()}
             <br />
-            <span className="text-sm flex gap-2 justify-center items-center">
-              Monthly Listeners on <SpotifyIcon h={5} />
+            <span className="text-sm flex gap-1 justify-center items-center">
+              Monthly Listeners on <SpotifyIcon h={4} />
             </span>
           </h1>
         </StatCard>

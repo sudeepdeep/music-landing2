@@ -1,68 +1,8 @@
-import React from "react";
 import { AppleMusicIcon, SpotifyIcon } from "../assets/Icons";
-import Gallery from "./Gallery";
-import Merchandise from "./Merchandise";
-import Card from "./Card";
+import { bannerSong, socialMedia, songs } from "../constants";
 import Button from "./Button";
-
-const songs: any = [
-  {
-    song: "23 theme - #AA23",
-    spotify: "",
-    appleMusic: "",
-    timeplay: "",
-  },
-  {
-    song: "#FeelTheThrill - ICC T20 World Cup",
-    spotify: "",
-    appleMusic: "",
-    timeplay: "",
-  },
-  {
-    song: "Bloody Valentine - #DC",
-    spotify: "",
-    appleMusic: "",
-    timeplay: "",
-  },
-  {
-    song: "Enakena - #LIK",
-    spotify: "",
-    appleMusic: "",
-    timeplay: "",
-  },
-  {
-    song: "Aaja Raaja - #KHxRK",
-    spotify: "",
-    appleMusic: "",
-    timeplay: "",
-  },
-  {
-    song: "#AayaSher - #Paradise",
-    spotify: "",
-    appleMusic: "",
-    timeplay: "",
-  },
-  {
-    song: "Thalapathy Kacheri - #JanaNayagan",
-    spotify: "",
-    appleMusic: "",
-    timeplay: "",
-  },
-  {
-    song: "Monica - #Coolie",
-    spotify: "",
-    appleMusic: "",
-    timeplay: "",
-  },
-];
-
-const bannerSong: any = {
-  name: "AA 23 Announcement Video | Icon Star Allu Arjun | Lokesh Kanagaraj | Anirudh | Mythri Movie Makers",
-  youtubeLink: "",
-  youtubeThumbNail: "https://img.youtube.com/vi/6hqduA_fUqE/hqdefault.jpg",
-  details: "8.6M Views • Jan 14, 2026",
-  spotifyCode: "3Zfq0a19kF3wGMmqxolt3d",
-};
+import Card from "./Card";
+import Merchandise from "./Merchandise";
 
 function SpotifyEmbed({ code }: any) {
   return (
@@ -81,7 +21,7 @@ function SpotifyEmbed({ code }: any) {
 
 function LatestReleases() {
   function handleClick() {
-    console.log("called");
+    window.location.href = socialMedia.spotify;
   }
   return (
     <section
@@ -207,7 +147,7 @@ function LatestReleases() {
           </Card>
         </div>
       </div>
-      <div className="max-w-4xl mx-auto h-[100vh] mt-[120px]">
+      <div className="max-w-4xl mx-auto md:h-[100vh] h-[80vh] md:mt-0 mt-[50px]">
         <Merchandise />
       </div>
       {/* <div className="h-[100vh] mt-5">
