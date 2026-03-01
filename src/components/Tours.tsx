@@ -1,42 +1,5 @@
 import React from "react";
-
-const concertDetails: any = [
-  {
-    tag: "Upcoming",
-    name: "Rockstar Anirudh XV - 15 years with you",
-    details: "May 21, 2026 • Gachibowli outdoor stadium - Hyderabad",
-    status: "SOLD OUT",
-    link: "",
-  },
-  {
-    tag: "Selling Fast",
-    name: "Rockstar Anirudh XV - 15 years with you",
-    details: "June 01, 2026 • The Trust Arena - AUCKLAND",
-    status: "TICKETS",
-    link: "",
-  },
-  {
-    tag: "Standard",
-    name: "Rockstar Anirudh XV - 15 years with you",
-    details: "June 04, 2026 • John cain Arena - MELBOURNE",
-    status: "TICKETS",
-    link: "",
-  },
-  {
-    tag: "Standard",
-    name: "Rockstar Anirudh XV - 15 years with you",
-    details: "June 06, 2026 • Qudos Bank Arena - SYDNEY",
-    status: "TICKETS",
-    link: "",
-  },
-  {
-    tag: "Standard",
-    name: "VARIETE INTERNATIONALE",
-    details: "April 18, 2026 • ADIDAS ARENA - PARIS",
-    status: "TICKETS",
-    link: "",
-  },
-];
+import { concertDetails } from "../constants";
 
 function Tours() {
   return (

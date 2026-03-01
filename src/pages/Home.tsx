@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import Banner from "../components/Banner";
-import Tours from "../components/Tours";
-import NavbarLatest from "../components/NavbarLatest";
-import "../App.css";
-import LatestReleases from "../components/LatestReleases";
 import { XIcon } from "lucide-react";
+import { useEffect, useState } from "react";
+import "../App.css";
 import AniHyd from "../assets/anirudh-hyd.jpg";
-import Gallery from "../components/Gallery";
+import Banner from "../components/Banner";
 import Footer from "../components/Footer";
+import LatestReleases from "../components/LatestReleases";
+import NavbarLatest from "../components/NavbarLatest";
+import Tours from "../components/Tours";
+import { concertDetails, mainCity } from "../constants";
 
 function Home() {
   const [showBanner, setShowBanner] = useState(false);
@@ -39,12 +39,22 @@ function Home() {
                 src={
                   "https://assets-in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-rockstar-anirudh-xv-15-years-with-you-0-2026-2-23-t-6-42-24.jpg"
                 }
-                className="hidden md:block"
+                onClick={() =>
+                  (window.location.href = concertDetails.find(
+                    (item: any) => item.city === mainCity,
+                  ).link)
+                }
+                className="cursor-pointer hidden md:block"
                 alt="anirudh-hyderabad"
               />
               <img
                 src={AniHyd}
-                className="block md:hidden"
+                onClick={() =>
+                  (window.location.href = concertDetails.find(
+                    (item: any) => item.city === mainCity,
+                  ).link)
+                }
+                className="cursor-pointer block md:hidden"
                 alt="anirudh-hyderabad"
               />
             </div>

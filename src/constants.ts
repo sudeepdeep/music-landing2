@@ -94,7 +94,74 @@ export const footerLinks = [
   },
 ];
 
+export const concertDetails: any = [
+  {
+    tag: "Upcoming",
+    name: "Rockstar Anirudh XV - 15 years with you",
+    details: "May 21, 2026 • Gachibowli outdoor stadium - Hyderabad",
+    status: "SOLD OUT",
+    link: "https://in.bookmyshow.com/events/rockstar-anirudh-xv-15-years-with-you/ET00486479",
+    city: "hyderabad",
+  },
+  {
+    tag: "Selling Fast",
+    name: "Rockstar Anirudh XV - 15 years with you",
+    details: "June 01, 2026 • The Trusts Arena - AUCKLAND",
+    status: "TICKETS",
+    link: "https://www.maestroproductions.com/events/40",
+    city: "auckland",
+  },
+  {
+    tag: "Standard",
+    name: "Rockstar Anirudh XV - 15 years with you",
+    details: "June 04, 2026 • John cain Arena - MELBOURNE",
+    status: "TICKETS",
+    link: "https://www.maestroproductions.com/events/39",
+    city: "melbourne",
+  },
+  {
+    tag: "Standard",
+    name: "Rockstar Anirudh XV - 15 years with you",
+    details: "June 06, 2026 • Qudos Bank Arena - SYDNEY",
+    status: "TICKETS",
+    link: "https://www.maestroproductions.com/events/42",
+    city: "sydney",
+  },
+  {
+    tag: "Standard",
+    name: "VARIETE INTERNATIONALE",
+    details: "April 18, 2026 • ADIDAS ARENA - PARIS",
+    status: "TICKETS",
+    link: "https://billetterie.adidasarena.com/fr/manifestation/anirudh-billet/idmanif/651086/codtypadh/FTT/numadh/01/codeconf/FTMS01",
+    city: "paris",
+  },
+];
+
+export const mainCity = "hyderabad";
+export const customLink = "https://www.maestroproductions.com";
+export const upcomingTourPhotos: any = [
+  {
+    link: concertDetails.find((item: any) => item.city === mainCity).link,
+    image:
+      "https://instagram.fhyd2-3.fna.fbcdn.net/v/t51.82787-15/639502561_18569272423023214_5026255310055413904_n.jpg?stp=dst-jpg_e35_p640x640_sh0.08_tt6&_nc_cat=100&ig_cache_key=MzgzNjU3OTc1OTUxODkwMjEzNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTgwMC5zZHIuQzMifQ%3D%3D&_nc_ohc=pV-FO91J7HEQ7kNvwH6JUUT&_nc_oc=AdlMlPPDz5qCNWT6feLUGcy0griDVuksDvyz6gMUHCBIRZwOBoItJlmuhprqR5ksGZieCDCqbnPUXVKBhkqeYT9F&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fhyd2-3.fna&_nc_gid=WdvqgUCAZCnUMitlTM_1Zg&_nc_ss=8&oh=00_AftFyhkmP62G_akjAqAy2-KYM2zF9bsmnx1srmL19Ir3eg&oe=69AA09F3",
+  },
+  {
+    link: customLink,
+    image:
+      "https://instagram.fhyd2-3.fna.fbcdn.net/v/t51.82787-15/642646431_18571936276023214_7908618614582043556_n.jpg?stp=dst-jpg_e35_p640x640_sh0.08_tt6&_nc_cat=107&ig_cache_key=Mzg0MTUyMTM0ODk2MzkzMDEwOA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEzNTB4MTY4OC5zZHIuQzMifQ%3D%3D&_nc_ohc=4b6CQVjXsBsQ7kNvwFM6I4s&_nc_oc=AdmWakCdZCR8zpb-HezQKmta9Nbh2FjbH06fkGLnJEJ2rYPF135nTQqOVQOuNpNchPUEygBnt-52Krdcy_rY4vAd&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fhyd2-3.fna&_nc_gid=QM6ttjhjjP-hSgJOVK7w3A&_nc_ss=8&oh=00_Afu1xzqPm4XFZwlEcZbNfKZxsIjPKgTy8LSs8k-WyYLrOQ&oe=69AA0CA5",
+  },
+  {
+    link: concertDetails.find((item: any) => item.city === "paris").link,
+    image:
+      "https://instagram.fhyd2-3.fna.fbcdn.net/v/t51.82787-15/642532737_18571621132023214_1893530310995551076_n.jpg?stp=dst-jpg_e35_p640x640_sh0.08_tt6&_nc_cat=102&ig_cache_key=Mzg0MDM5NzYyOTI1NjMxNDA5MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTgwMS5zZHIuQzMifQ%3D%3D&_nc_ohc=aDIAWkMu_kgQ7kNvwFZ9ooC&_nc_oc=Adm3AlehBg24Y1aE2Y0dp77J4DoR7a8m8Ld53CmVCVBLgFup20UauaQgpgm__y4pPPcQjjQzm-q6vsF0BQfdUHlh&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fhyd2-3.fna&_nc_gid=QM6ttjhjjP-hSgJOVK7w3A&_nc_ss=8&oh=00_Afteb6D75f7IqX1294Un9OhmMz_fCDuD2dTEUAr8ZhaSJA&oe=69AA0D16",
+  },
+];
+
 export const MONTHLY_LISTENERS = 23_653_910;
 export const COUNTRIES = 184;
 export const STREAMS = 13;
 export const DURATION = 2000;
+
+export const privacyPolicyLink = "";
+export const termsLink = "";
+export const cookieLink = "";

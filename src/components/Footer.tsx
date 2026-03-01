@@ -1,4 +1,5 @@
 import { footerLinks, socialMedia } from "../constants";
+import Upcoming from "./Upcoming";
 
 function Footer() {
   const socialLinks = [
@@ -59,9 +60,10 @@ function Footer() {
   ];
 
   return (
-    <footer className="relative px-8 md:px-16 lg:px-24 overflow-hidden py-4">
+    <footer className="relative h-auto px-8 md:px-16 lg:px-24 overflow-hidden py-4">
       <div className="relative z-10 max-w-7xl mx-auto mb-[50px]">
         {/* Footer Links Grid */}
+        <Upcoming />
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {footerLinks.map((section, index) => (
